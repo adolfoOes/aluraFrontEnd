@@ -1,3 +1,7 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 header {
     background: #BBBBBB;
     padding: 20px 0;
@@ -87,11 +91,6 @@ footer {
     margin-top: 20px;
 }
 
-main {
-    width: 940px;
-    margin: 0 auto;
-}
-
 form {
     margin: 40px 0;
 }
@@ -146,3 +145,130 @@ th, td {
     border: 1px solid #000000;
     padding: 8px 15px ;
 }
+
+.banner { 
+    width: 100%;
+}
+
+.titulo_home {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1em;
+    clear: left;
+}
+
+/* .titulo_home:first-letter {
+    font-weight: bold;
+}
+
+.titulo_home:before {
+    content: "[ ";
+}
+
+.titulo_home:after {
+    content: " ]";
+} */
+
+.principal {
+    padding: 3em 0;
+    background: #FFFFFE;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.principal p {
+    margin-bottom: 1em;
+}
+
+.principal strong {
+    font-weight: bold;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.utencilios {
+    width: 110px;
+    margin: 0 15px 15px 0;
+    float: left;
+}
+
+.mapa { 
+    padding: 3em 0;
+    background:linear-gradient(#FFFFFE,#888888);
+}
+
+.mapa_conteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.mapa p { 
+    padding: 0 0 2em;
+    text-align: center;
+}
+
+.beneficios {
+    padding: 3em 0;
+    background:linear-gradient(#888888,#696969);
+}
+
+.conteudo_beneficios {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista_beneficios { 
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.itens {
+    line-height: 1.5;
+}
+
+.itens:before {
+    content: "★ ";
+}
+
+.itens:first-child {
+    font-weight: bold;
+}
+
+.imagem_beneficios {
+    width: 60%;
+    opacity: 1;
+    transition: 400ms;
+}
+
+.imagem_beneficios:hover {
+    opacity: 0.3;
+}
+
+.video { 
+    width: 560px;
+    margin: 2em auto;
+}
+
+@media screen and (max-width: 480px) {
+    .caixa, .principal, .conteudo_beneficios, .mapa_conteudo, .video { 
+        width: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .lista_beneficios, .imagem_beneficios { 
+        width: 100%;
+    }
+
+}
+
+
