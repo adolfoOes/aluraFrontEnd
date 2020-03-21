@@ -1,18 +1,15 @@
-body {
-    overflow: scroll;
+.campo-digitacao {
+    font-size: 20px;
+    height: 130px;
+    border: 3px solid black;
 }
 
 .frase {
     font-size: 20px;
     text-align: left;
 }
-.campo-digitacao {
-    font-size: 20px;
-    height: 150px;
-    border: 3px solid black;
-}
 
-.campo-desabilitado{
+.campo-desativado {
     background-color: lightgray;
 }
 
@@ -20,19 +17,23 @@ body {
     vertical-align: middle;
 }
 
-.borda-errada{
-    border: 3px solid red;
+.borda-verde {
+    border: 3px solid green;
 }
 
-.borda-correta{
-    border: 3px solid green;
+.borda-vermelha {
+    border: 3px solid red;
 }
 
 .placar {
     display: none;
 }
 
-#erro {
+body {
+    overflow: scroll;
+}
+
+#erro{
     color: red;
     display: none;
 }
@@ -41,10 +42,23 @@ body {
     display: none;
 }
 
-#frase-id {
+#frase-id{
     width: 40px;
 }
 
-#botao-sync {
+#botao-sync{
     float: right;
+}
+
+.select-usuarios{
+    display:inline-block;
+}
+
+#usuarios{
+    display:block;
+}
+
+.selectize-input {
+    width: 150px;
+    vertical-align: middle;
 }

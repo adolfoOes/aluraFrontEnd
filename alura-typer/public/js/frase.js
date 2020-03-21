@@ -1,64 +1,57 @@
 $("#botao-frase").click(fraseAleatoria);
-$("#botao-frase-id").click(buscarFrase);
+$("#botao-frase-id").click(buscaFrase);
 
-
-function fraseAleatoria(){
-
-    $("#spinner").toggle()
-
-    $.get("http://localhost:3000/frases",trocaFraseAleatoria)
+function fraseAleatoria() {
+	$("#spinner").toggle();
+    $.get("http://localhost:3000/frases", trocaFraseAleatoria)
     .fail(function(){
-        
-        $("#erro").toggle()
-
-        setTimeout(() => {
-            $("#erro").toggle()
-        }, 5000);
-
+    	$("#erro").toggle();
+    	setTimeout(function(){
+    		$("#erro").toggle();
+    	},1500);
     })
     .always(function(){
-        $("#spinner").toggle()
-    })
+    	$("#spinner").toggle();
+    });
 }
 
-function trocaFraseAleatoria(data){
-    
-    var frase = $(".frase")
-    var numAleatorio = Math.floor(Math.random() * data.length)
-    frase.text(data[numAleatorio].texto)
+function trocaFraseAleatoria(data) {
+    var frase = $(".frase");
+    var numeroAleatorio = Math.floor(Math.random() * data.length);
 
-    atualizaTamanhoFrase()
-    atualizaTempoInicial(data[numAleatorio].tempo)
-
+    frase.text(data[numeroAleatorio].texto);
+    atualizaTamanhoFrase();
+    atualizaTempoInicial(data[numeroAleatorio].tempo);
 }
 
-function buscarFrase() {
-   
-    $("#spinner").toggle()
-   
+
+function buscaFrase() {
+
+    $("#spinner").toggle();
     var fraseId = $("#frase-id").val();
-    var dados = {id: fraseId}
 
+    //criacao do objeto JS que guarda a id
+    var dados = {id : fraseId}; 
 
-    $.get("http://localhost:3000/frases",dados,trocaFrase)
+    //passando objecto como segundo parametro
+    $.get("http://localhost:3000/frases", dados, trocaFrase)
     .fail(function(){
-        
-        $("#erro").toggle()
-
-        setTimeout(() => {
-            $("#erro").toggle()
-        }, 5000);
-
+        $("#erro").toggle();
+        setTimeout(function(){
+            $("#erro").toggle();
+    },2000);
     })
     .always(function(){
-        $("#spinner").toggle()
-    })
+        $("#spinner").toggle();
+    });
 }
 
 function trocaFrase(data) {
-    var frase = $(".frase")
-    frase.text(data.texto)
 
-    atualizaTamanhoFrase()
-    atualizaTempoInicial(data.tempo)    
+    console.log(data);
+
+    var frase = $(".frase");
+    frase.text(data.texto); //cuidado, texto com "o" no final 
+    atualizaTamanhoFrase();
+    atualizaTempoInicial(data.tempo);
 }
