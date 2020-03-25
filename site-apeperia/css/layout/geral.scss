@@ -6,7 +6,11 @@ body {
   .container {
     width: 940px;
     margin: 0 auto;
-  }
+
+    @media #{$mobile} {
+        width: 90%;
+      }
+  } 
   
   .titulo-secao {
     text-decoration: underline;

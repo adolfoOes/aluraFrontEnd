@@ -62,8 +62,8 @@
     width: 210px;
     height: 38px;
     font-size: 1.2em;
-    @include borda-arredondada;
-    @include sombra-padrao;
+    @include border-radius($raio);
+    @include box-shadow(black 0px 2px 6.65px);
     margin-left: 2em;
   }
   

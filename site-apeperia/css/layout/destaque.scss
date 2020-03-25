@@ -6,6 +6,12 @@
     color: white;
     height: 330px;
     padding-top: 10em;
+
+    @media #{$mobile} {
+      font-size: 14px;
+		  height: 250px;
+    }
+
   }
   
   .destaque p {
@@ -29,7 +35,7 @@
     border: 0;
     padding: .6em;
     font-size: 1.2em;
-    @include borda-arredondada($raio-grande);
-    @include sombra-padrao;
+    @include border-radius($raio-grande);
+    @include box-shadow(black 0px 2px 6.65px);
     font-weight: bold;
   }
